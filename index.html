@@ -9,9 +9,28 @@
 <link rel="stylesheet" type="text/css" href="assets/css.css?1575471931">
 <link rel="stylesheet" type="text/css" href="assets/main-style.css?1575471931">
 <script type="text/javascript" src="assets/backoffer.js?1575471931"></script>
+<script>
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+</script>
+<script>
+	function redirectKuy(){
+		window.location.href = "https://otwkuy.xyz/index.php?s2=" + getQueryVariable("s2")
+	}
+
+</script>
 </head>
 <body style="">
 <body style="">
+
 <div id="wrapper">
 	<!-- Main -->
 	<div class="wrapper">
@@ -28,7 +47,12 @@
 			<h1>Choose & Enjoy <br>Fuck one of our hottest girls right now</h1>
 			<p>
 				<b> THIS WEBSITE IS FREE </b><br>Click the link below</p>
-			</header><footer><a href="https://redirect.otwkuy.xyz"><button type="submit" class="btn btn-danger btn-lg stylee">CONTINUE</button></a></footer></section>
+			</header><footer>
+				
+					<button type="submit" class="btn btn-danger btn-lg stylee" onclick="redirectKuy()">CONTINUE</button>
+				
+			</footer>
+		</section>
 			<!-- Footer -->
 			<footer id="footer">
 			<ul class="copyright">
